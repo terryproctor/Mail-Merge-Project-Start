@@ -9,7 +9,7 @@
 names=[]
 with open(r"Mail Merge Project Start/Input/Names/invited_names.txt") as names_file:
     for name in  names_file.readlines():
-        names.append(name.replace("\n", ""))
+        names.append(name.strip().replace("\n", ""))
 
 for name in names:
     with open(r"Mail Merge Project Start/Input/Letters/starting_letter.txt", "r") as letter_start:
